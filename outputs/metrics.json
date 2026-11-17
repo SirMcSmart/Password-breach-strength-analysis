@@ -1,0 +1,142 @@
+{
+ "n_breached": 6936,
+ "n_train": 5548,
+ "n_test": 1388,
+ "n_not_in_hibp": 3,
+ "corpus_size_estimate": 2067567476.736,
+ "target": "log10(empirical guess rank in HIBP Pwned Passwords)",
+ "target_range_test": [
+  0.9542425094393249,
+  9.241769677562713
+ ],
+ "models": {
+  "charset_entropy_raw": {
+   "spearman": 0.23020288754273063,
+   "mae_log10": 4.149026409251415,
+   "r2": -8.148968007501297,
+   "within_1_order": 0.13256484149855907,
+   "overestimate_10x_rate": 0.8364553314121037,
+   "median_error_log10": 3.854878304451424
+  },
+  "charset_entropy_calibrated": {
+   "spearman": 0.23020288754273063,
+   "mae_log10": 1.278301173266398,
+   "r2": 0.08510883254354129,
+   "within_1_order": 0.4553314121037464,
+   "overestimate_10x_rate": 0.2896253602305475,
+   "median_error_log10": 0.011230567272816128
+  },
+  "shannon_entropy_raw": {
+   "spearman": 0.20297322154891106,
+   "mae_log10": 1.8242147729078895,
+   "r2": -1.0041291626027244,
+   "within_1_order": 0.3515850144092219,
+   "overestimate_10x_rate": 0.23991354466858789,
+   "median_error_log10": -0.5028530859542149
+  },
+  "shannon_entropy_calibrated": {
+   "spearman": 0.20142727934324078,
+   "mae_log10": 1.3054864002840558,
+   "r2": 0.06308192137678914,
+   "within_1_order": 0.4596541786743516,
+   "overestimate_10x_rate": 0.276657060518732,
+   "median_error_log10": 0.14621749058917644
+  },
+  "pattern_estimator_raw": {
+   "spearman": 0.5673748689572486,
+   "mae_log10": 1.4880854713877363,
+   "r2": -0.4854855579195636,
+   "within_1_order": 0.4538904899135447,
+   "overestimate_10x_rate": 0.3451008645533141,
+   "median_error_log10": 0.12420165002571482
+  },
+  "pattern_estimator_calibrated": {
+   "spearman": 0.5673748689572486,
+   "mae_log10": 1.1022435736012586,
+   "r2": 0.32426398373230547,
+   "within_1_order": 0.5093659942363112,
+   "overestimate_10x_rate": 0.2543227665706052,
+   "median_error_log10": -0.16692548641030758
+  },
+  "gbm_structure": {
+   "spearman": 0.4518385865666589,
+   "mae_log10": 1.1102331262668563,
+   "r2": 0.254600642255571,
+   "within_1_order": 0.5482708933717579,
+   "overestimate_10x_rate": 0.22694524495677235,
+   "median_error_log10": 0.11037462311334112
+  },
+  "gbm_full": {
+   "spearman": 0.747274062484921,
+   "mae_log10": 0.8046100127748272,
+   "r2": 0.5842084532214162,
+   "within_1_order": 0.6851585014409222,
+   "overestimate_10x_rate": 0.15706051873198848,
+   "median_error_log10": 0.036387301491136004
+  }
+ },
+ "permutation_importance_top15": [
+  {
+   "feature": "pattern_log10_guesses",
+   "mae_increase": 0.6665350571590019
+  },
+  {
+   "feature": "log10_best_rank_passwords",
+   "mae_increase": 0.05779348894467371
+  },
+  {
+   "feature": "all_lower_alpha",
+   "mae_increase": 0.04883811855544913
+  },
+  {
+   "feature": "cover_bruteforce",
+   "mae_increase": 0.03766902579361744
+  },
+  {
+   "feature": "cover_dictionary",
+   "mae_increase": 0.03623179808314954
+  },
+  {
+   "feature": "charset_entropy_bits",
+   "mae_increase": 0.03360192406891575
+  },
+  {
+   "feature": "n_upper",
+   "mae_increase": 0.02867062862333314
+  },
+  {
+   "feature": "n_lower",
+   "mae_increase": 0.02828477254916939
+  },
+  {
+   "feature": "longest_piece_frac",
+   "mae_increase": 0.019150204437577534
+  },
+  {
+   "feature": "n_classes",
+   "mae_increase": 0.01767672202167241
+  },
+  {
+   "feature": "n_digit",
+   "mae_increase": 0.015219945479016039
+  },
+  {
+   "feature": "n_mask_segments",
+   "mae_increase": 0.012474197981046852
+  },
+  {
+   "feature": "unique_char_ratio",
+   "mae_increase": 0.00783250558350812
+  },
+  {
+   "feature": "has_year",
+   "mae_increase": 0.00746793920473039
+  },
+  {
+   "feature": "cover_repeat",
+   "mae_increase": 0.007304802928623078
+  }
+ ],
+ "censored_check": null,
+ "gbm_full_iterations": 136
+}

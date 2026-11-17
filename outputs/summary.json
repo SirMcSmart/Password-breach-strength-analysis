@@ -1,0 +1,573 @@
+{
+ "dataset": {
+  "wordlist_unique": 999994,
+  "n_passwords": 6939,
+  "n_log_uniform": 6000,
+  "n_random_bucket": 939,
+  "n_breached": 6936,
+  "n_random_buckets": 1000,
+  "n_corpus_sample_hashes": 1971786,
+  "n_buckets_queried": 6979
+ },
+ "breaches": {
+  "n_breaches_total": 1052,
+  "n_excluded_fabricated_or_spam": 19,
+  "n_breaches": 1033,
+  "n_with_passwords": 673,
+  "share_with_passwords": 0.6515004840271055,
+  "accounts_total": 16306044125,
+  "accounts_with_passwords": 11035689591,
+  "n_verified": 993,
+  "median_disclosure_lag_days": 132.0,
+  "median_disclosure_lag_days_with_passwords": 237.0,
+  "share_disclosed_after_1_year": 0.3465634075508228,
+  "per_year": [
+   {
+    "year": 2007,
+    "breaches": 1,
+    "with_passwords": 1,
+    "accounts": 2136520,
+    "median_lag_days": 3362.0,
+    "password_accounts": 2136520
+   },
+   {
+    "year": 2008,
+    "breaches": 3,
+    "with_passwords": 3,
+    "accounts": 360519656,
+    "median_lag_days": 2891.0,
+    "password_accounts": 360519656
+   },
+   {
+    "year": 2009,
+    "breaches": 2,
+    "with_passwords": 1,
+    "accounts": 5774783,
+    "median_lag_days": 2747.0,
+    "password_accounts": 1291178
+   },
+   {
+    "year": 2010,
+    "breaches": 4,
+    "with_passwords": 2,
+    "accounts": 6241534,
+    "median_lag_days": 1917.5,
+    "password_accounts": 2030632
+   },
+   {
+    "year": 2011,
+    "breaches": 18,
+    "with_passwords": 15,
+    "accounts": 150672261,
+    "median_lag_days": 1926.5,
+    "password_accounts": 108084315
+   },
+   {
+    "year": 2012,
+    "breaches": 20,
+    "with_passwords": 20,
+    "accounts": 491300912,
+    "median_lag_days": 1632.0,
+    "password_accounts": 491300912
+   },
+   {
+    "year": 2013,
+    "breaches": 32,
+    "with_passwords": 31,
+    "accounts": 643073501,
+    "median_lag_days": 1172.5,
+    "password_accounts": 642893534
+   },
+   {
+    "year": 2014,
+    "breaches": 49,
+    "with_passwords": 45,
+    "accounts": 184151675,
+    "median_lag_days": 451.0,
+    "password_accounts": 176559960
+   },
+   {
+    "year": 2015,
+    "breaches": 74,
+    "with_passwords": 68,
+    "accounts": 426018455,
+    "median_lag_days": 300.0,
+    "password_accounts": 414073433
+   },
+   {
+    "year": 2016,
+    "breaches": 99,
+    "with_passwords": 84,
+    "accounts": 1697318979,
+    "median_lag_days": 263.0,
+    "password_accounts": 1616704175
+   },
+   {
+    "year": 2017,
+    "breaches": 51,
+    "with_passwords": 42,
+    "accounts": 350250964,
+    "median_lag_days": 218.0,
+    "password_accounts": 322274442
+   },
+   {
+    "year": 2018,
+    "breaches": 76,
+    "with_passwords": 64,
+    "accounts": 1384286790,
+    "median_lag_days": 168.0,
+    "password_accounts": 971368424
+   },
+   {
+    "year": 2019,
+    "breaches": 81,
+    "with_passwords": 57,
+    "accounts": 3554067470,
+    "median_lag_days": 169.0,
+    "password_accounts": 1312877834
+   },
+   {
+    "year": 2020,
+    "breaches": 96,
+    "with_passwords": 71,
+    "accounts": 1274128156,
+    "median_lag_days": 166.5,
+    "password_accounts": 897670984
+   },
+   {
+    "year": 2021,
+    "breaches": 78,
+    "with_passwords": 52,
+    "accounts": 727339120,
+    "median_lag_days": 162.5,
+    "password_accounts": 110402544
+   },
+   {
+    "year": 2022,
+    "breaches": 61,
+    "with_passwords": 32,
+    "accounts": 190999082,
+    "median_lag_days": 275.0,
+    "password_accounts": 61772268
+   },
+   {
+    "year": 2023,
+    "breaches": 46,
+    "with_passwords": 21,
+    "accounts": 142603766,
+    "median_lag_days": 48.5,
+    "password_accounts": 117115179
+   },
+   {
+    "year": 2024,
+    "breaches": 87,
+    "with_passwords": 32,
+    "accounts": 1517276935,
+    "median_lag_days": 26.0,
+    "password_accounts": 664424984
+   },
+   {
+    "year": 2025,
+    "breaches": 63,
+    "with_passwords": 19,
+    "accounts": 2900748120,
+    "median_lag_days": 34.0,
+    "password_accounts": 2675267892
+   },
+   {
+    "year": 2026,
+    "breaches": 92,
+    "with_passwords": 13,
+    "accounts": 297135446,
+    "median_lag_days": 14.5,
+    "password_accounts": 86920725
+   }
+  ],
+  "top_data_classes": [
+   {
+    "data_class": "Email addresses",
+    "breaches": 1026
+   },
+   {
+    "data_class": "Passwords",
+    "breaches": 673
+   },
+   {
+    "data_class": "Names",
+    "breaches": 553
+   },
+   {
+    "data_class": "Usernames",
+    "breaches": 486
+   },
+   {
+    "data_class": "IP addresses",
+    "breaches": 382
+   },
+   {
+    "data_class": "Phone numbers",
+    "breaches": 379
+   },
+   {
+    "data_class": "Physical addresses",
+    "breaches": 303
+   },
+   {
+    "data_class": "Dates of birth",
+    "breaches": 285
+   },
+   {
+    "data_class": "Genders",
+    "breaches": 192
+   },
+   {
+    "data_class": "Geographic locations",
+    "breaches": 148
+   },
+   {
+    "data_class": "Purchases",
+    "breaches": 86
+   },
+   {
+    "data_class": "Website activity",
+    "breaches": 77
+   },
+   {
+    "data_class": "Job titles",
+    "breaches": 52
+   },
+   {
+    "data_class": "Social media profiles",
+    "breaches": 51
+   },
+   {
+    "data_class": "Employers",
+    "breaches": 45
+   }
+  ],
+  "password_storage_counts": {
+   "md5": 227,
+   "not stated": 145,
+   "plaintext": 110,
+   "bcrypt": 97,
+   "sha1": 51,
+   "sha2": 24,
+   "pbkdf2": 9,
+   "argon2": 7,
+   "scrypt": 3
+  },
+  "password_storage_groups": {
+   "Fast hash": 302,
+   "Not stated": 145,
+   "Slow hash": 116,
+   "Plaintext": 110
+  },
+  "password_storage_group_accounts": {
+   "Fast hash": 2859926784,
+   "Not stated": 5455734182,
+   "Plaintext": 1530433006,
+   "Slow hash": 1189595619
+  },
+  "share_stated_storage_plaintext_or_fast": 0.7803030303030303,
+  "n_stated_storage": 528,
+  "largest_password_breaches": [
+   {
+    "title": "Synthient Credential Stuffing Threat Data",
+    "breach_date": "2025-04-11",
+    "accounts": 1957476021,
+    "storage": "not stated"
+   },
+   {
+    "title": "Collection #1",
+    "breach_date": "2019-01-07",
+    "accounts": 772904991,
+    "storage": "not stated"
+   },
+   {
+    "title": "Exploit.In",
+    "breach_date": "2016-10-13",
+    "accounts": 593427119,
+    "storage": "not stated"
+   },
+   {
+    "title": "Anti Public Combo List",
+    "breach_date": "2016-12-16",
+    "accounts": 457962538,
+    "storage": "not stated"
+   },
+   {
+    "title": "Combolists Posted to Telegram",
+    "breach_date": "2024-05-28",
+    "accounts": 361468099,
+    "storage": "not stated"
+   },
+   {
+    "title": "MySpace",
+    "breach_date": "2008-07-01",
+    "accounts": 359420698,
+    "storage": "sha1"
+   },
+   {
+    "title": "ALIEN TXTBASE Stealer Logs",
+    "breach_date": "2025-02-15",
+    "accounts": 284132969,
+    "storage": "not stated"
+   },
+   {
+    "title": "Wattpad",
+    "breach_date": "2020-06-29",
+    "accounts": 268765495,
+    "storage": "bcrypt"
+   },
+   {
+    "title": "NetEase",
+    "breach_date": "2015-10-19",
+    "accounts": 234842089,
+    "storage": "plaintext"
+   },
+   {
+    "title": "Cit0day",
+    "breach_date": "2020-11-04",
+    "accounts": 226883414,
+    "storage": "plaintext"
+   }
+  ]
+ },
+ "passwords": {
+  "uniform_sample_n": 945,
+  "uniform_share_in_hibp": 0.9968253968253968,
+  "uniform_breached_n": 942,
+  "length_counts_uniform_breached": {
+   "3": 1,
+   "4": 29,
+   "5": 49,
+   "6": 233,
+   "7": 158,
+   "8": 270,
+   "9": 67,
+   "10": 64,
+   "11": 26,
+   "12": 23,
+   "13": 9,
+   "14": 5,
+   "15": 4,
+   "16": 2,
+   "17": 1,
+   "19": 1
+  },
+  "median_length_uniform_breached": 8.0,
+  "classes_uniform_breached": {
+   "1": 508,
+   "2": 371,
+   "3": 63
+  },
+  "top_masks_uniform_breached": [
+   {
+    "mask": "llllllll",
+    "share": 0.10084925690021232
+   },
+   {
+    "mask": "llllll",
+    "share": 0.07855626326963906
+   },
+   {
+    "mask": "dddddd",
+    "share": 0.07643312101910828
+   },
+   {
+    "mask": "lllllll",
+    "share": 0.06369426751592357
+   },
+   {
+    "mask": "lllllllll",
+    "share": 0.032908704883227176
+   },
+   {
+    "mask": "lllllldd",
+    "share": 0.03184713375796178
+   },
+   {
+    "mask": "lllll",
+    "share": 0.03078556263269639
+   },
+   {
+    "mask": "llllllllll",
+    "share": 0.028662420382165606
+   },
+   {
+    "mask": "dddddddd",
+    "share": 0.02653927813163482
+   },
+   {
+    "mask": "llllldd",
+    "share": 0.022292993630573247
+   }
+  ],
+  "pattern_prevalence_uniform_breached": {
+   "contains a dictionary/leaked word": 0.6910828025477707,
+   "capitalised first letter only": 0.03821656050955414,
+   "ends in digits": 0.47664543524416136,
+   "contains a year (1900-2039)": 0.07112526539278131,
+   "all digits": 0.15180467091295116,
+   "all lowercase letters": 0.37898089171974525,
+   "keyboard walk": 0.032908704883227176,
+   "character sequence (abc, 123)": 0.03184713375796178,
+   "repeated characters/blocks": 0.06369426751592357,
+   "l33t substitution": 0.045647558386411886
+  },
+  "crack_time_breached": {
+   "online_throttled": {
+    "label": "Online, throttled (100 guesses/hour)",
+    "share_within_1_day": 0.0021231422505307855,
+    "share_within_1_second": 0.0
+   },
+   "online_unthrottled": {
+    "label": "Online, unthrottled (10 guesses/s)",
+    "share_within_1_day": 0.17834394904458598,
+    "share_within_1_second": 0.0
+   },
+   "offline_bcrypt_cost10": {
+    "label": "Offline bcrypt cost 10, 1 GPU",
+    "share_within_1_day": 0.9904458598726115,
+    "share_within_1_second": 0.005307855626326964
+   },
+   "offline_sha1": {
+    "label": "Offline unsalted SHA-1, 1 GPU",
+    "share_within_1_day": 1.0,
+    "share_within_1_second": 1.0
+   },
+   "offline_ntlm": {
+    "label": "Offline NTLM, 1 GPU",
+    "share_within_1_day": 1.0,
+    "share_within_1_second": 1.0
+   }
+  },
+  "policies": [
+   {
+    "policy": "nist_800_63b_rev4",
+    "label": "NIST SP 800-63B-4 (single-factor)",
+    "blocklist": true,
+    "share_breached_uniform_pass_composition": 0.008492569002123142,
+    "n_breached_compliant_all": 24,
+    "median_log10_rank_compliant": 8.184221470823093,
+    "median_charset_bits_compliant": 82.718800023077,
+    "share_compliant_cracked_1day_bcrypt": 1.0,
+    "most_common_compliant_examples": [
+     "Hd764nW5d7E1vb1",
+     "Mailcreated5240",
+     "Azsxdcfvgbhnjmk",
+     "gtnhjpfdjlcr123",
+     "ghjcnjnfrghjcnj"
+    ]
+   },
+   {
+    "policy": "nist_800_63b_rev4_mfa",
+    "label": "NIST SP 800-63B-4 (with MFA)",
+    "blocklist": true,
+    "share_breached_uniform_pass_composition": 0.5010615711252654,
+    "n_breached_compliant_all": 2796,
+    "median_log10_rank_compliant": 5.503473496888378,
+    "median_charset_bits_compliant": 37.603517745128734,
+    "share_compliant_cracked_1day_bcrypt": 0.9928469241773963,
+    "most_common_compliant_examples": [
+     "123456789",
+     "12345678",
+     "password",
+     "1234567890",
+     "qwerty123"
+    ]
+   },
+   {
+    "policy": "pci_dss_v4",
+    "label": "PCI DSS v4.0 Req 8.3.6",
+    "blocklist": false,
+    "share_breached_uniform_pass_composition": 0.03503184713375796,
+    "n_breached_compliant_all": 75,
+    "median_log10_rank_compliant": 8.114698779748176,
+    "median_charset_bits_compliant": 72.37895002019238,
+    "share_compliant_cracked_1day_bcrypt": 0.92,
+    "most_common_compliant_examples": [
+     "1qaz2wsx3edc",
+     "123qweasdzxc",
+     "123456qwerty",
+     "qwertyuiop12",
+     "Q1w2e3r4t5y6"
+    ]
+   },
+   {
+    "policy": "cis_no_mfa",
+    "label": "CIS Password Policy Guide (no MFA)",
+    "blocklist": true,
+    "share_breached_uniform_pass_composition": 0.013800424628450107,
+    "n_breached_compliant_all": 36,
+    "median_log10_rank_compliant": 8.143128468263612,
+    "median_charset_bits_compliant": 77.54887502163469,
+    "share_compliant_cracked_1day_bcrypt": 1.0,
+    "most_common_compliant_examples": [
+     "Hd764nW5d7E1vb1",
+     "stalkerstalker",
+     "Mailcreated5240",
+     "Azsxdcfvgbhnjmk",
+     "gtnhjpfdjlcr123"
+    ]
+   },
+   {
+    "policy": "legacy_complexity",
+    "label": "Legacy complexity (8+, 3 of 4 classes)",
+    "blocklist": false,
+    "share_breached_uniform_pass_composition": 0.044585987261146494,
+    "n_breached_compliant_all": 122,
+    "median_log10_rank_compliant": 7.787811743314279,
+    "median_charset_bits_compliant": 47.633570483095,
+    "share_compliant_cracked_1day_bcrypt": 0.9590163934426229,
+    "most_common_compliant_examples": [
+     "Abcd1234",
+     "7uGd5HIp2J",
+     "Q1w2e3r4t5y6",
+     "Mustang1",
+     "Soso123aljg"
+    ]
+   }
+  ],
+  "entropy_overstatement_test_median_log10": 3.854878304451424,
+  "entropy_overstatement_test_legacy_compliant_median_log10": 8.322898408108857,
+  "famous_examples": [
+   {
+    "password": "123456",
+    "pwned_count": 210463629,
+    "log10_rank": 0.0,
+    "charset_entropy_bits": 19.931568569324174
+   },
+   {
+    "password": "password",
+    "pwned_count": 52373976,
+    "log10_rank": 0.6020599913279624,
+    "charset_entropy_bits": 37.603517745128734
+   },
+   {
+    "password": "qwerty",
+    "pwned_count": 30813001,
+    "log10_rank": 0.8450980400142568,
+    "charset_entropy_bits": 28.202638308846552
+   },
+   {
+    "password": "iloveyou",
+    "pwned_count": 7007939,
+    "log10_rank": 1.3010299956639813,
+    "charset_entropy_bits": 37.603517745128734
+   },
+   {
+    "password": "dragon",
+    "pwned_count": 4415386,
+    "log10_rank": 1.4913616938342726,
+    "charset_entropy_bits": 28.202638308846552
+   },
+   {
+    "password": "letmein",
+    "pwned_count": 1406641,
+    "log10_rank": 2.0827853703164503,
+    "charset_entropy_bits": 32.90307802698764
+   }
+  ]
+ }
+}

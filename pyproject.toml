@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pwanalysis"
+version = "1.0.0"
+description = "Password breach & strength analysis: HaveIBeenPwned breach data plus a crack-time model built on entropy, common patterns and password-policy compliance"
+requires-python = ">=3.11"
+license = "MIT"
+
+[project.scripts]
+pwcheck = "pwanalysis.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: test calls the live HIBP API (deselect with -m 'not network')"]
+addopts = "-m 'not network'"

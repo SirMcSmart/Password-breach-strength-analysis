@@ -1,0 +1,91 @@
+# Password Breach & Strength Analysis configuration.
+seed: 42
+
+hibp:
+  # Pwned Passwords range API (k-anonymity): only the first 5 hex chars of a SHA-1 hash are sent.
+  range_url: "https://api.pwnedpasswords.com/range/{prefix}"
+  breaches_url: "https://haveibeenpwned.com/api/v3/breaches"
+  user_agent: "password-breach-analysis-research"
+  add_padding: true          # ask the API to pad responses so response size leaks nothing
+  workers: 8
+  timeout_seconds: 15
+  max_retries: 4
+
+data:
+  raw_dir: data/raw
+  cache_dir: data/cache
+  processed_dir: data/processed
+  # Plaintext candidates: SecLists "xato-net 10 million passwords" top-1M list (frequency-ordered, MIT).
+  wordlist_url: "https://raw.githubusercontent.com/danielmiessler/SecLists/master/Passwords/Common-Credentials/xato-net-10-million-passwords-1000000.txt"
+  wordlist_name: xato-net-10-million-passwords-1000000.txt
+  # Rank-ordered English words (Google Trillion Word Corpus subset, research use).
+  english_url: "https://raw.githubusercontent.com/first20hours/google-10000-english/master/google-10000-english-usa-no-swears.txt"
+  english_name: google-10000-english-usa-no-swears.txt
+
+sample:
+  # Candidates are sampled log-uniformly by wordlist rank so both the very common head and the long
+  # tail are represented (a uniform sample would be almost all tail).
+  n_passwords: 6000
+  # Random k-anonymity buckets downloaded in full. Their hash counts are an unbiased sample of the
+  # whole Pwned Passwords corpus and are used to turn a breach count into an attacker guess rank.
+  n_random_buckets: 1000
+
+model:
+  test_size: 0.2
+  # sklearn HistGradientBoostingRegressor, target = log10(empirical guess rank)
+  learning_rate: 0.06
+  max_iter: 800
+  max_leaf_nodes: 31
+  min_samples_leaf: 20
+  l2_regularization: 1.0
+  early_stopping: true
+  validation_fraction: 0.15
+  n_iter_no_change: 40
+
+# Guessing rates in guesses/second. Fast-hash and bcrypt figures are rounded public hashcat
+# benchmarks for a single high-end consumer GPU (RTX 4090 class); treat them as order-of-magnitude.
+attack_scenarios:
+  online_throttled:        {rate: 0.0277778, label: "Online, throttled (100 guesses/hour)"}
+  online_unthrottled:      {rate: 10,        label: "Online, unthrottled (10 guesses/s)"}
+  offline_bcrypt_cost10:   {rate: 5000,      label: "Offline bcrypt cost 10, 1 GPU"}
+  offline_sha1:            {rate: 5.0e+10,    label: "Offline unsalted SHA-1, 1 GPU"}
+  offline_ntlm:            {rate: 2.9e+11,    label: "Offline NTLM, 1 GPU"}
+
+# Password policies checked for compliance. "blocklist" means the password must not appear in the
+# Pwned Passwords corpus (count > 0 fails). Rules with null are not enforced.
+policies:
+  nist_800_63b_rev4:
+    label: "NIST SP 800-63B-4 (single-factor)"
+    min_length: 15
+    max_length_at_least: 64
+    min_classes: null
+    required_classes: []
+    blocklist: true
+  nist_800_63b_rev4_mfa:
+    label: "NIST SP 800-63B-4 (with MFA)"
+    min_length: 8
+    min_classes: null
+    required_classes: []
+    blocklist: true
+  pci_dss_v4:
+    label: "PCI DSS v4.0 Req 8.3.6"
+    min_length: 12
+    min_classes: null
+    required_classes: [alpha, digit]
+    blocklist: false
+  cis_no_mfa:
+    label: "CIS Password Policy Guide (no MFA)"
+    min_length: 14
+    min_classes: null
+    required_classes: []
+    blocklist: true
+  legacy_complexity:
+    label: "Legacy complexity (8+, 3 of 4 classes)"
+    min_length: 8
+    min_classes: 3
+    required_classes: []
+    blocklist: false
+
+artifacts:
+  models_dir: models
+  outputs_dir: outputs

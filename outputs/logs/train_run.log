@@ -1,0 +1,9 @@
+2026-11-17 10:02:33,972 INFO breached: 6936 (train 5548 / test 1388), not in HIBP: 3
+2026-11-17 10:02:38,670 INFO charset_entropy_raw            spearman=0.230 mae=4.15 within1=0.13 over10x=0.84
+2026-11-17 10:02:38,670 INFO charset_entropy_calibrated     spearman=0.230 mae=1.28 within1=0.46 over10x=0.29
+2026-11-17 10:02:38,670 INFO shannon_entropy_raw            spearman=0.203 mae=1.82 within1=0.35 over10x=0.24
+2026-11-17 10:02:38,670 INFO shannon_entropy_calibrated     spearman=0.201 mae=1.31 within1=0.46 over10x=0.28
+2026-11-17 10:02:38,670 INFO pattern_estimator_raw          spearman=0.567 mae=1.49 within1=0.45 over10x=0.35
+2026-11-17 10:02:38,670 INFO pattern_estimator_calibrated   spearman=0.567 mae=1.10 within1=0.51 over10x=0.25
+2026-11-17 10:02:38,670 INFO gbm_structure                  spearman=0.452 mae=1.11 within1=0.55 over10x=0.23
+2026-11-17 10:02:38,670 INFO gbm_full                       spearman=0.747 mae=0.80 within1=0.69 over10x=0.16
